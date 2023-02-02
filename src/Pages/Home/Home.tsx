@@ -2,9 +2,7 @@ import Projects from "../../Data/projects.json"
 import Ironhackers from "../../Data/ironhackers.json"
 import DisplayProject from '../../Components/DisplayProject/DisplayProject';
 import { useState } from 'react';
-import { ChosenProject, ChosenIronhacker } from '../../Types/Types';
 import DisplayIronhacker from '../../Components/DisplayIronhacker/DisplayIronhacker';
-
 
 function HomePage() {
   const swapDisplayTimerMs = 5000
@@ -40,18 +38,14 @@ function HomePage() {
       setRandomIhIndex(newIhIndex)
     }
   }, swapDisplayTimerMs)
-
-  const randomProject: ChosenProject = Projects[randomIndex]
-  const randomIronhacker: ChosenIronhacker = Ironhackers[randomIhIndex]
-
+  
   return (
-    <div className="App">
-      
+    <div className="App">      
 
       <h1>IronVengers Hub Club</h1>
 
-      <DisplayIronhacker chosenIronhacker={{ ...randomIronhacker }} />
-      <DisplayProject chosenProject={{ ...randomProject }} />
+      <DisplayIronhacker singleIronhacker={{ ...Ironhackers[randomIhIndex] }} />
+      <DisplayProject chosenProject={{ ...Projects[randomIndex] }} />
     </div>
   );
 }

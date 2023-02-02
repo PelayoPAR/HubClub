@@ -13,7 +13,7 @@ export type Project = {
     chosenProject: ChosenProject,
 }
 
-export type ChosenIronhacker = {
+export type SingleIronhacker = {
     id: string,
     name: string,
     email: string,
@@ -24,5 +24,5 @@ export type ChosenIronhacker = {
 }
 
 export type Ironhacker = {
-    chosenIronhacker: ChosenIronhacker
+    singleIronhacker: SingleIronhacker
 }

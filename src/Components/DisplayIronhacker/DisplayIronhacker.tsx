@@ -1,8 +1,8 @@
 import { Ironhacker } from "../../Types/Types"
 
-function DisplayIronhacker({ chosenIronhacker }: Ironhacker) {
+function DisplayIronhacker({ singleIronhacker }: Ironhacker) {
 
-    const { name, email, linkedIn, gitHub, portfolio, aboutMe } = chosenIronhacker
+    const { name, email, linkedIn, gitHub, portfolio, aboutMe } = singleIronhacker
 
     return (
         <div>
