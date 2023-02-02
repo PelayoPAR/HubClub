@@ -1,0 +1,74 @@
+[
+    {
+        "id": "1",
+        "name": "googleFounder",
+        "email": "googleFounder@yahoo.com",
+        "linkedIn": "link",
+        "gitHub": "GH",
+        "portfolio": "another link",
+        "aboutMe": "lorem ipsum bla bla bla"
+    },
+    {
+        "id": "2",
+        "name": "notGoogleFounder",
+        "email": "notGoogleFounder@yahoo.com",
+        "linkedIn": "link",
+        "gitHub": "GH",
+        "portfolio": "another link",
+        "aboutMe": "lorem ipsum bla bla bla"
+    },
+    {
+        "id": "3",
+        "name": "facebookFounder",
+        "email": "facebookFounder@google.com",
+        "linkedIn": "link",
+        "gitHub": "GH",
+        "portfolio": "another link",
+        "aboutMe": "lorem ipsum bla bla bla"
+    },
+    {
+        "id": "4",
+        "name": "otherfacebookFounder",
+        "email": "otherfacebookFounder@yahoo.com",
+        "linkedIn": "link",
+        "gitHub": "GH",
+        "portfolio": "another link",
+        "aboutMe": "lorem ipsum bla bla bla"
+    },
+    {
+        "id": "5",
+        "name": "Jeff Besos",
+        "email": "JeffBesos@yahoo.com",
+        "linkedIn": "link",
+        "gitHub": "GH",
+        "portfolio": "another link",
+        "aboutMe": "lorem ipsum bla bla bla"
+    },
+    {
+        "id": "6",
+        "name": "not Jeffie",
+        "email": "notJeffie@google.com",
+        "linkedIn": "link",
+        "gitHub": "GH",
+        "portfolio": "another link",
+        "aboutMe": "lorem ipsum bla bla bla"
+    },
+    {
+        "id": "7",
+        "name": "Terminator",
+        "email": "Terminator@yahoo.com",
+        "linkedIn": "link",
+        "gitHub": "GH",
+        "portfolio": "another link",
+        "aboutMe": "lorem ipsum bla bla bla"
+    },
+    {
+        "id": "8",
+        "name": "Skynet",
+        "email": "Skynet@google.com",
+        "linkedIn": "link",
+        "gitHub": "GH",
+        "portfolio": "another link",
+        "aboutMe": "lorem ipsum bla bla bla"
+    }
+]
