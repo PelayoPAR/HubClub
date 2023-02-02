@@ -1,12 +1,17 @@
+import { useNavigate } from "react-router-dom"
 import { Ironhacker } from "../../Types/Types"
 
 function DisplayIronhacker({ singleIronhacker }: Ironhacker) {
 
-    const { name, email, linkedIn, gitHub, portfolio, aboutMe } = singleIronhacker
+    const { name, email, linkedIn, gitHub, portfolio, aboutMe, slug } = singleIronhacker
+    const navigate = useNavigate()    
 
     return (
-        <div>
-            <h2>Ironhacker</h2>
+        <div style={{border: "solid lightGrey 1px", margin:"6px"}} 
+        onClick={()=>{
+            navigate(`/ironhackers/${slug}`)
+        }
+            }>
             <p>{name}</p>
             <p>{email}</p>
             <a href={linkedIn}>LinkedIn</a>

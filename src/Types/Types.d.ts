@@ -1,4 +1,4 @@
-export type ChosenProject = {
+export type SingleProject = {
     id?: string,
     projectName?: string,
     URL?: string,
@@ -10,10 +10,10 @@ export type ChosenProject = {
 }
 
 export type Project = {
-    chosenProject: ChosenProject,
+    singleProject: SingleProject,
 }
 
-export type SingleIronhacker = {
+export type SingleIronhackerType = {
     id: string,
     name: string,
     email: string,
@@ -21,8 +21,9 @@ export type SingleIronhacker = {
     gitHub: string,
     portfolio: string,
     aboutMe: string,
+    slug: string,
 }
 
 export type Ironhacker = {
-    singleIronhacker: SingleIronhacker
+    singleIronhacker: SingleIronhackerType
 }

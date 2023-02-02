@@ -2,21 +2,20 @@ import React from 'react'
 import { Project } from '../../Types/Types'
 
 // type Project = {
-//     chosenProject: ChosenProject,
+//     singleProject: ChosenProject,
 // }
 
-function DisplayProject({ chosenProject }: Project) {
-    // if (chosenProject) {
-    //     console.log(chosenProject)
-    //     console.log(`name is : ${chosenProject.projectName}`)
+function DisplayProject({ singleProject }: Project) {
+    // if (singleProject) {
+    //     console.log(singleProject)
+    //     console.log(`name is : ${singleProject.projectName}`)
     // } else {
     //     console.log("failurrreeeee")
     // }
-    const { projectName, URL, description, owners, tech_used, img, module } = chosenProject
+    const { projectName, URL, description, owners, tech_used, img, module } = singleProject
 
     return (
         <div>
-            <h2>Project</h2>
             <p>{projectName}</p>
             <a target="_blank" rel="noreferrer" href={URL}>{URL}</a>
 

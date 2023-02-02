@@ -38,14 +38,17 @@ function HomePage() {
       setRandomIhIndex(newIhIndex)
     }
   }, swapDisplayTimerMs)
+
+
   
   return (
     <div className="App">      
 
       <h1>IronVengers Hub Club</h1>
-
+      <h2>Ironhacker</h2>
       <DisplayIronhacker singleIronhacker={{ ...Ironhackers[randomIhIndex] }} />
-      <DisplayProject chosenProject={{ ...Projects[randomIndex] }} />
+      <h2>Project</h2>
+      <DisplayProject singleProject={{ ...Projects[randomIndex] }} />
     </div>
   );
 }

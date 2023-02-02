@@ -6,7 +6,8 @@
         "linkedIn": "link",
         "gitHub": "GH",
         "portfolio": "another link",
-        "aboutMe": "lorem ipsum bla bla bla"
+        "aboutMe": "lorem ipsum bla bla bla",
+        "slug": "googlefounder"
     },
     {
         "id": "2",
@@ -15,7 +16,8 @@
         "linkedIn": "link",
         "gitHub": "GH",
         "portfolio": "another link",
-        "aboutMe": "lorem ipsum bla bla bla"
+        "aboutMe": "lorem ipsum bla bla bla",
+        "slug": "notgooglefounder"
     },
     {
         "id": "3",
@@ -24,7 +26,8 @@
         "linkedIn": "link",
         "gitHub": "GH",
         "portfolio": "another link",
-        "aboutMe": "lorem ipsum bla bla bla"
+        "aboutMe": "lorem ipsum bla bla bla",
+        "slug": "facebookfounder"
     },
     {
         "id": "4",
@@ -33,7 +36,8 @@
         "linkedIn": "link",
         "gitHub": "GH",
         "portfolio": "another link",
-        "aboutMe": "lorem ipsum bla bla bla"
+        "aboutMe": "lorem ipsum bla bla bla",
+        "slug": "otherfacebookfounder"
     },
     {
         "id": "5",
@@ -42,7 +46,8 @@
         "linkedIn": "link",
         "gitHub": "GH",
         "portfolio": "another link",
-        "aboutMe": "lorem ipsum bla bla bla"
+        "aboutMe": "lorem ipsum bla bla bla",
+        "slug": "jeff-besos"
     },
     {
         "id": "6",
@@ -51,7 +56,8 @@
         "linkedIn": "link",
         "gitHub": "GH",
         "portfolio": "another link",
-        "aboutMe": "lorem ipsum bla bla bla"
+        "aboutMe": "lorem ipsum bla bla bla",
+        "slug": "not-jeffie"
     },
     {
         "id": "7",
@@ -60,7 +66,8 @@
         "linkedIn": "link",
         "gitHub": "GH",
         "portfolio": "another link",
-        "aboutMe": "lorem ipsum bla bla bla"
+        "aboutMe": "lorem ipsum bla bla bla",
+        "slug": "terminator"
     },
     {
         "id": "8",
@@ -69,6 +76,7 @@
         "linkedIn": "link",
         "gitHub": "GH",
         "portfolio": "another link",
-        "aboutMe": "lorem ipsum bla bla bla"
+        "aboutMe": "lorem ipsum bla bla bla",
+        "slug": "skynet"
     }
 ]
