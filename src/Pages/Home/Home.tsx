@@ -1,8 +1,8 @@
 import Projects from "../../Data/projects.json"
 import Ironhackers from "../../Data/ironhackers.json"
-import DisplayProject from '../../Components/DisplayProject/DisplayProject';
-import { useState } from 'react';
-import DisplayIronhacker from '../../Components/DisplayIronhacker/DisplayIronhacker';
+import DisplayProject from '../../Components/DisplayProject/DisplayProject'
+import { useState } from 'react'
+import DisplayIronhacker from '../../Components/DisplayIronhacker/DisplayIronhacker'
 
 function HomePage() {
   const swapDisplayTimerMs = 5000
@@ -40,9 +40,9 @@ function HomePage() {
   }, swapDisplayTimerMs)
 
 
-  
+
   return (
-    <div className="App">      
+    <div className="App">
 
       <h1>IronVengers Hub Club</h1>
       <h2>Ironhacker</h2>
