@@ -1,4 +1,4 @@
-import React from 'react'
+import { useNavigate } from "react-router-dom"
 import { Project } from '../../Types/Types'
 
 // type Project = {
@@ -12,10 +12,13 @@ function DisplayProject({ singleProject }: Project) {
     // } else {
     //     console.log("failurrreeeee")
     // }
-    const { projectName, URL, description, owners, tech_used, img, module } = singleProject
+    const { projectName, URL, description, owners, tech_used, img, module, slug } = singleProject
+    const navigate = useNavigate()
 
     return (
-        <div>
+        <div onClick={() => {
+            navigate(`/projects/${slug}`)
+        }}>
             <p>{projectName}</p>
             <a target="_blank" rel="noreferrer" href={URL}>{URL}</a>
 

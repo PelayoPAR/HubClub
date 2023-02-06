@@ -5,6 +5,7 @@ import { Route, Routes } from 'react-router-dom';
 import Ironhackers from './Pages/Ironhackers/Ironhackers';
 import Projects from './Pages/Projects/Projects';
 import SingleIronhacker from './Pages/SingleIronhacker/SingleIronhacker';
+import SingleProject from './Pages/SingleProject/SingleProject';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route path="/ironhackers" element={<Ironhackers />}></Route>
         <Route path="/projects" element={<Projects />}></Route>
         <Route path="/ironhackers/:name" element={<SingleIronhacker />}></Route>
+        <Route path="/projects/:projectName" element={<SingleProject />}></Route>
       </Routes>
     </div>
   );
