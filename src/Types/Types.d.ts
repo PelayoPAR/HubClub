@@ -1,12 +1,13 @@
 export type SingleProject = {
-    id?: string,
-    projectName?: string,
-    URL?: string,
-    description?: string,
-    owners?: string[],
-    tech_used?: string[],
-    img?: string,
-    module?: string,
+    id: string,
+    projectName: string,
+    URL: string,
+    description: string,
+    owners: string[],
+    tech_used: string[],
+    img: string,
+    module: string,
+    slug: string,
 }
 
 export type Project = {

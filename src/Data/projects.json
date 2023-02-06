@@ -1,43 +1,78 @@
 [
     {
-"id": "1",
-"projectName": "First Project",
-"URL": "https://www.google.com",
-"description": "One of our colleagues made Google",
-"owners": ["googleFounder", "notGoogleFounder"],
-"tech_used": ["M", "E", "R", "N"],
-"img": "https://es.web.img3.acsta.net/pictures/18/08/28/21/15/1664480.jpg",
-"module": "3"
-},
-{
-"id": "2",
-"projectName": "Second Project",
-"URL": "https://www.facebook.com",
-"description": "One of our colleagues made Facebook",
-"owners": ["facebookFounder", "otherfacebookFounder"],
-"tech_used": ["M", "E", "R", "N"],
-"img": "https://businessesgrow.com/wp-content/uploads/2017/11/Screenshot-2017-11-23-11.01.32-1024x579.png",
-"module": "3"
-},
-{
-    "id": "3",
-    "projectName": "Third Project",
-    "URL": "https://www.amazon.com",
-    "description": "One of our colleagues made Facebook",
-    "owners": ["Jeff Besos", "not Jeffie"],
-    "tech_used": ["M", "E", "R", "N"],
-    "img": "https://helios-i.mashable.com/imagery/articles/040rihycuKTaQjcyNZllqTW/hero-image.fill.size_1248x702.v1614273947.jpg",
-    "module": "3"
-},
-{
-    "id": "4",
-    "projectName": "Fourth Project",
-    "URL": "https://openai.com/blog/chatgpt/",
-    "description": "One of our colleagues made chatGPT",
-    "owners": ["Terminator", "Skynet"],
-    "tech_used": ["M", "E", "R", "N"],
-    "img": "https://i.blogs.es/a2119c/terminator-2/1366_2000.jpg",
-    "module": "3"
-}
+        "id": "1",
+        "projectName": "First Project",
+        "URL": "https://www.google.com",
+        "description": "One of our colleagues made Google",
+        "owners": [
+            "googleFounder",
+            "notGoogleFounder"
+        ],
+        "tech_used": [
+            "M",
+            "E",
+            "R",
+            "N"
+        ],
+        "img": "https://es.web.img3.acsta.net/pictures/18/08/28/21/15/1664480.jpg",
+        "module": "3",
+        "slug": "first-project"
+    },
+    {
+        "id": "2",
+        "projectName": "Second Project",
+        "URL": "https://www.facebook.com",
+        "description": "One of our colleagues made Facebook",
+        "owners": [
+            "facebookFounder",
+            "otherfacebookFounder"
+        ],
+        "tech_used": [
+            "M",
+            "E",
+            "R",
+            "N"
+        ],
+        "img": "https://businessesgrow.com/wp-content/uploads/2017/11/Screenshot-2017-11-23-11.01.32-1024x579.png",
+        "module": "3",
+        "slug": "second-project"
+    },
+    {
+        "id": "3",
+        "projectName": "Third Project",
+        "URL": "https://www.amazon.com",
+        "description": "One of our colleagues made Facebook",
+        "owners": [
+            "Jeff Besos",
+            "not Jeffie"
+        ],
+        "tech_used": [
+            "M",
+            "E",
+            "R",
+            "N"
+        ],
+        "img": "https://helios-i.mashable.com/imagery/articles/040rihycuKTaQjcyNZllqTW/hero-image.fill.size_1248x702.v1614273947.jpg",
+        "module": "3",
+        "slug": "third-project"
+    },
+    {
+        "id": "4",
+        "projectName": "Fourth Project",
+        "URL": "https://openai.com/blog/chatgpt/",
+        "description": "One of our colleagues made chatGPT",
+        "owners": [
+            "Terminator",
+            "Skynet"
+        ],
+        "tech_used": [
+            "M",
+            "E",
+            "R",
+            "N"
+        ],
+        "img": "https://i.blogs.es/a2119c/terminator-2/1366_2000.jpg",
+        "module": "3",
+        "slug": "fourth-project"
+    }
 ]
-
