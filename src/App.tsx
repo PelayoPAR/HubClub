@@ -18,7 +18,6 @@ function App() {
         <Route path="/projects" element={<Projects />}></Route>
         <Route path="/ironhackers/:name" element={<SingleIronhacker />}></Route>
       </Routes>
-      {/* test */}
     </div>
   );
 }
