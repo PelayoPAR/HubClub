@@ -28,3 +28,5 @@ export type SingleIronhackerType = {
 export type Ironhacker = {
     singleIronhacker: SingleIronhackerType
 }
+
+export type IronhackerArr = SingleIronhackerType[]
