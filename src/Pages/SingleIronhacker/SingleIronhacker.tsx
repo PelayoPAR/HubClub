@@ -1,14 +1,34 @@
-import Ironhackers from '../../Data/ironhackers.json'
+// import Ironhackers from '../../Data/ironhackers.json'
+import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import apiClient from '../../Service/apiClient'
+import { SingleIronhackerType } from '../../Types/Types'
 
 function SingleIronhacker() {
-  const { name } = useParams()
+  const { slugName } = useParams()
 
-  const ironhacker = Ironhackers.find(ironhacker => ironhacker.slug === name)
+  // const ironhacker = Ironhackers.find(ironhacker => ironhacker.slug === name)
 
-  // console.log(ironhacker)
+  const [ironhacker, setIronhacker] = useState<SingleIronhackerType>({id: "", name: "", email: "", linkedIn: "", gitHub: "", portfolio: "", aboutMe: "", slug: ""})
+  //ToDo: find a better solution later (than adding all properties of ironhacker)  
+  const [isLoading, setIsLoading] = useState(true)
+  const [isError, setIsError] = useState(false)
 
-  if (ironhacker) {
+  useEffect(() => {
+    apiClient.get<SingleIronhackerType>(`/ironhackers/${slugName}`).then((result) => setIronhacker(result.data)).catch(err => {console.log(err)
+    setIsError(true)}).finally(() => setIsLoading(false))
+  }, [slugName])
+
+  
+  if (isError) {
+    return (
+      <div>UPSI</div>
+    )
+  }
+  if (isLoading) {
+    <div>Loading...</div>
+  }
+  
     const { name, email, linkedIn, gitHub, portfolio, aboutMe } = ironhacker
 
     return (
@@ -22,10 +42,5 @@ function SingleIronhacker() {
       </div>
     )
   }
-
-  return (
-    <div>UPSI</div>
-  )
-}
 
 export default SingleIronhacker

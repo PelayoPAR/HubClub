@@ -3,7 +3,7 @@ import { Ironhacker } from "../../Types/Types"
 
 function DisplayIronhacker({ singleIronhacker }: Ironhacker) {
 
-    const { name, email, linkedIn, gitHub, portfolio, aboutMe, slug } = singleIronhacker
+    const { name, email, linkedIn, gitHub, portfolio, slug } = singleIronhacker
     const navigate = useNavigate()
 
     return (

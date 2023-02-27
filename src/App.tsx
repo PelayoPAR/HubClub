@@ -17,7 +17,7 @@ function App() {
         <Route path="/" element={<HomePage />}></Route>
         <Route path="/ironhackers" element={<Ironhackers />}></Route>
         <Route path="/projects" element={<Projects />}></Route>
-        <Route path="/ironhackers/:name" element={<SingleIronhacker />}></Route>
+        <Route path="/ironhackers/:slugName" element={<SingleIronhacker />}></Route>
         <Route path="/projects/:projectName" element={<SingleProject />}></Route>
       </Routes>
     </div>

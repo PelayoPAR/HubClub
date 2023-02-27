@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import DisplayIronhacker from '../../Components/DisplayIronhacker/DisplayIronhacker'
-// import ironhackers from '../../Data/ironhackers.json'
 import apiClient from '../../Service/apiClient'
 import { SingleIronhackerType } from "../../Types/Types"
 
