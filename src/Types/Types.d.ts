@@ -1,6 +1,6 @@
-export type SingleProject = {
+export type SingleProjectType = {
     id: string,
-    projectName: string,
+    title: string,
     URL: string,
     description: string,
     owners: string[],
@@ -8,10 +8,6 @@ export type SingleProject = {
     img: string,
     module: string,
     slug: string,
-}
-
-export type Project = {
-    singleProject: SingleProject,
 }
 
 export type SingleIronhackerType = {
@@ -24,9 +20,3 @@ export type SingleIronhackerType = {
     aboutMe: string,
     slug: string,
 }
-
-export type Ironhacker = {
-    singleIronhacker: SingleIronhackerType
-}
-
-export type IronhackerArr = SingleIronhackerType[]

@@ -15,10 +15,10 @@ function Ironhackers() {
     <div>
       <h3>Ironhackers</h3>
       <div>
-        {Array.isArray(ironhackers) ? ironhackers.map((ironhacker, index) => {
+        {ironhackers.map((ironhacker, index) => {
           return <DisplayIronhacker key={index} singleIronhacker={ironhacker} />
-        }) : ""}
-      </div>
+        })}
+        </div>
     </div>
   )
 }
