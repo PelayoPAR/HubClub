@@ -1,11 +1,11 @@
-import { useEffect, useState } from "react"
+import { useCallback, useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import apiClient from "../../Service/apiClient"
-import { SingleIronhackerType } from "../../Types/Types"
+import { SingleIronhackerType, SingleProjectType } from "../../Types/Types"
 
 function SingleIronhacker() {
   const { slugName } = useParams()
-
+  const [projects, setProjects] = useState<SingleProjectType[]>([])
   const [ironhacker, setIronhacker] = useState<SingleIronhackerType>({
     id: "",
     name: "",
@@ -20,16 +20,41 @@ function SingleIronhacker() {
   const [isLoading, setIsLoading] = useState(true)
   const [isError, setIsError] = useState(false)
 
+  // const getIronhacker = async () => {
+  //   await apiClient
+  //     .get<SingleIronhackerType>(`/ironhackers/${slugName}`)
+  //     .then((result) => setIronhacker(result.data))
+  //     .catch((err) => {
+  //       console.log(err)
+  //       setIsError(true)
+  //     })
+  // }
+
+  // const getProjects = async () => {
+  //   await apiClient.get<SingleProjectType[]>(`/projects/by-owner/${slugName}`).then((result) => setProjects(result.data)).catch((err) => {
+  //     console.log(err)
+  //     setIsError(true)
+  //   })
+  // }
+
+  const getProjects = useCallback(async () => await apiClient.get<SingleProjectType[]>(`/projects/by-owner/${slugName}`).then((result) => setProjects(result.data)).catch((err) => {
+    console.log(err)
+    setIsError(true)
+  }), [slugName])
+
+  const getIronhacker = useCallback(async () => await apiClient
+    .get<SingleIronhackerType>(`/ironhackers/${slugName}`)
+    .then((result) => setIronhacker(result.data))
+    .catch((err) => {
+      console.log(err)
+      setIsError(true)
+    }), [slugName])
+
   useEffect(() => {
-    apiClient
-      .get<SingleIronhackerType>(`/ironhackers/${slugName}`)
-      .then((result) => setIronhacker(result.data))
-      .catch((err) => {
-        console.log(err)
-        setIsError(true)
-      })
-      .finally(() => setIsLoading(false))
-  }, [slugName])
+    getIronhacker()
+    getProjects()
+    setIsLoading(false)
+  }, [getProjects, getIronhacker])
 
   if (isError) {
     return <div>UPSI</div>
@@ -50,6 +75,7 @@ function SingleIronhacker() {
       </a>
       <a href={portfolio}>Portfolio</a>
       <p>{aboutMe}</p>
+      {projects.map((project) => <div style={{ color: "orange" }} key={project.id}>{project.title}</div>)}
     </div>
   )
 }
