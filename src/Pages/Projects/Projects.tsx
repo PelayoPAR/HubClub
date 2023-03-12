@@ -19,13 +19,24 @@ function Projects() {
       .catch((err) => console.log(err))
   }, [])
 
-  // useEffect(() => {}, [selectedProjects])
-
-  const displaySearchedProjects = (IHname: string) => {
-    const filteredProjects = projects.filter((project) =>
-      project.owners.includes(IHname)
+  const displaySearchedProjects = (theChosen: {
+    ironhacker: string
+    module: string
+  }) => {
+    const filteredProjects = projects.filter(
+      (project) => project.owners.includes(theChosen.ironhacker)
+      // &&
+      // project.module === theChosen.module
+      /* ToDo: 
+      a. display the project that matches by name and empty module 
+      b. display the project that matches by name and module
+      c. display the project that matches by module only
+       c2. update options to only show ironhackers that have project with that module
+      d. display all (kinda already happenin')
+      */
     )
-
+    console.log(filteredProjects)
+    console.log(theChosen)
     setSelectedProjects(filteredProjects)
   }
 
@@ -40,9 +51,6 @@ function Projects() {
         : projects.map((project, index) => {
             return <DisplayProject key={index} singleProject={project} />
           })}
-      {/* {selectedProjects.map((project, index) => {
-        return <DisplayProject key={index} singleProject={project} />
-      })} */}
     </div>
   )
 }
