@@ -9,7 +9,8 @@ function Projects() {
   const [selectedProjects, setSelectedProjects] = useState<SingleProjectType[]>(
     []
   )
-
+  // console.log("projecccts: ", projects)
+  console.log("selectedProjects: ", selectedProjects)
   useEffect(() => {
     apiClient
       .get<SingleProjectType[]>("/projects")
@@ -23,22 +24,41 @@ function Projects() {
     ironhacker: string
     module: string
   }) => {
-    const filteredProjects = projects.filter(
-      (project) => project.owners.includes(theChosen.ironhacker)
-      // &&
-      // project.module === theChosen.module
-      /* ToDo: 
+    /* ToDo: 
       a. display the project that matches by name and empty module 
       b. display the project that matches by name and module
       c. display the project that matches by module only
        c2. update options to only show ironhackers that have project with that module
       d. display all (kinda already happenin')
       */
+    console.log("theFinalChosen is: ", theChosen)
+    const nameFilteredProjects = projects.filter(
+      (project) => project.owners.includes(theChosen.ironhacker)
+      // project.module == theChosen.module
     )
-    console.log(filteredProjects)
-    console.log(theChosen)
-    setSelectedProjects(filteredProjects)
+    // console.log("single filter whiskey: ", nameFilteredProjects)
+    const doubleFilteredProjects = nameFilteredProjects.filter(
+      (project) => project.module == theChosen.module
+    )
+    const moduleFilteredProjects = projects.filter(
+      (project) => project.module == theChosen.module
+    )
+    // console.log(nameFilteredProjects)
+    // console.log("the chosen is:", theChosen)
+    // console.log("theChosen module is: ", theChosen.module)
+    // console.log("double filter whiskey: ", doubleFilteredProjects)
+    if (theChosen.ironhacker && !theChosen.module) {
+      setSelectedProjects(nameFilteredProjects)
+    }
+    if (theChosen.ironhacker && theChosen.module) {
+      setSelectedProjects(doubleFilteredProjects)
+    }
+    if (!theChosen.ironhacker && theChosen.module) {
+      setSelectedProjects(moduleFilteredProjects)
+    }
   }
+
+  console.log("selectos are: ", selectedProjects)
 
   return (
     <div>

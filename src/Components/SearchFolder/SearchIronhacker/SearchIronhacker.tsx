@@ -49,12 +49,13 @@ function SearchIronhacker({ displaySearchedProjects }: searchFunctionProp) {
       }
     })
     moduleArr.sort()
-    console.log("mod", moduleArr)
+    // console.log("mod", moduleArr)
     setProjectModules(moduleArr)
   }
 
   const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const { name, value } = event.target
+    // console.log("eventTargetName", event.target.name)
     setTheChosen({ ...theChosen, [name]: value })
   }
 
@@ -86,7 +87,7 @@ function SearchIronhacker({ displaySearchedProjects }: searchFunctionProp) {
             </optgroup>
           </select>
           <label htmlFor="module">by Ironhack Module: </label>
-          <select id="module" name="module" onChange={(event) => handleChange}>
+          <select id="module" name="module" onChange={handleChange}>
             <option></option>
             <optgroup label="Module">
               {projectModules.map((module, index) => {
